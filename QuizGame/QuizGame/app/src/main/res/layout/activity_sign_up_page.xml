@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sign_Up_Page">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextSignUpMail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/signup" />
+
+    <EditText
+        android:id="@+id/editTextSignUpMail"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+    android:layout_marginBottom="16dp"
+    android:hint="Email"
+    android:inputType="textEmailAddress"
+    app:layout_constraintTop_toBottomOf="@+id/imageView2"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginHorizontal="16dp" />
+
+    <EditText
+        android:id="@+id/editTextSignUpPassword"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+    android:layout_marginBottom="16dp"
+    android:hint="Hasło"
+    android:inputType="textPassword"
+    app:layout_constraintTop_toBottomOf="@+id/editTextSignUpMail"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginHorizontal="16dp" />
+
+    <Button
+        android:id="@+id/buttonSignUpSign"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/purple_700"
+        android:text="Zarejestruj sie"
+        android:textColor="#FAF5F5"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSignUpPassword" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="320dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSignUpSign"
+        app:layout_constraintStart_toStartOf="@+id/buttonSignUpSign"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSignUpSign" />
+</androidx.constraintlayout.widget.ConstraintLayout>
